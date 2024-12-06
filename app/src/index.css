@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.error {
+  color: #fff; /* Texto blanco */
+  background-color: #ff4d4f; /* Fondo rojo */
+  border: 1px solid #ff1a1a; /* Borde rojo */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-align: center; /* Centrar texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px auto; /* Espaciado alrededor */
+  max-width: 400px; /* Ancho máximo */
+  position: relative; /* Garantizar que el transform no afecte el flujo */
+  opacity: 0; /* Comienza invisible */
+  transform: translateY(-20px); /* Comienza más arriba */
+  animation: fade-in-out 5s ease-in-out forwards;
+}
+
+/* Animación combinada */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Comienza más arriba */
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición original */
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0); /* Permanece visible */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); /* Se desplaza hacia arriba */
+  }
+}
